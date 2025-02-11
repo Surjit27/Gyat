@@ -2,16 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Gyat/', // <-- Add your repository name as the base path
+  base: '/Gyat/', // 👈 Ensure this matches your GitHub repo name
   plugins: [react()],
   build: {
+    outDir: 'dist',
     rollupOptions: {
-      input: './index.html', // Ensure correct input file
-    },
-  },
-  resolve: {
-    alias: {
-      '@': '/src', // Ensure correct alias for src
+      input: './index.html',
     },
   },
 });
